@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "cv-content" {
-  bucket = "cv-content"
+  bucket = "cv-content-cloud-challenge-tugrul"
 
   tags = {
     environment  = "production"
@@ -42,7 +42,7 @@ resource "aws_s3_bucket_public_access_block" "access_good_1" {
 
 
 resource "aws_s3_bucket" "log_bucket" {
-  bucket = "my-tf-log-bucket"
+  bucket = "my-tf-log-bucket-cloud-challenge-tugrul"
 }
 
 resource "aws_s3_bucket_acl" "log_bucket_acl" {
