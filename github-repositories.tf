@@ -1,6 +1,6 @@
 resource "github_repository" "alaz" {
   name        = "alaz"
-  description = "Cloud challenge project root repository for backend"
+  description = "Root repository for the cloud challenge backend"
 
   visibility = "public"
   auto_init = true
