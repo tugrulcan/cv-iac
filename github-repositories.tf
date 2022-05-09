@@ -55,3 +55,28 @@ resource "github_branch_protection" "staging" {
   enforce_admins   = true
   allows_deletions = false
 }
+
+
+resource "github_actions_secret" "secret_aws_access_key" {
+  repository       = github_repository.alaz.name
+  secret_name      = "AWS_ACCESS_KEY_ID"
+  plaintext_value  = var.aws_access_key
+}
+
+resource "github_actions_secret" "secret_aws_secret_key" {
+  repository       = github_repository.alaz.name
+  secret_name      = "AWS_SECRET_ACCESS_KEY"
+  plaintext_value  = var.aws_secret_key
+}
+
+resource "github_actions_secret" "secret_aws_region" {
+  repository       = github_repository.alaz.name
+  secret_name      = "AWS_REGION"
+  plaintext_value  = var.aws_secret_key
+}
+
+resource "github_actions_secret" "secret_sqs_url" {
+  repository       = github_repository.alaz.name
+  secret_name      = "AWS_SQS_URL"
+  plaintext_value  = var.aws_secret_key
+}
