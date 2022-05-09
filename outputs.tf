@@ -1,3 +1,3 @@
-output "aws_sqs_url" {
-  value = aws_sqs_queue.cv-content-queue.url
+output "aws_bucket_name" {
+  value = aws_s3_bucket.cv-content.bucket
 }
