@@ -9,3 +9,12 @@ provider "aws" {
   secret_key = var.aws_secret_key
 }
 
+terraform {
+  cloud {
+    organization = "tugrul"
+
+    workspaces {
+      name = "cv-iac"
+    }
+  }
+}
