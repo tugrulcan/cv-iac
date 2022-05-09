@@ -2,7 +2,7 @@ variable "GITHUB_TOKEN" {
   description = "Github Personal Access Token"
 }
 
-variable "region" {
+variable "aws_region" {
   description = "AWS region"
   default     = "eu-west-1"
 }

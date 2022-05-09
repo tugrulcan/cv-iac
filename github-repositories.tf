@@ -72,11 +72,11 @@ resource "github_actions_secret" "secret_aws_secret_key" {
 resource "github_actions_secret" "secret_aws_region" {
   repository      = github_repository.alaz.name
   secret_name     = "AWS_REGION"
-  plaintext_value = var.aws_secret_key
+  plaintext_value = var.aws_region
 }
 
-resource "github_actions_secret" "secret_sqs_url" {
+resource "github_actions_secret" "secrets_s3_bucket" {
   repository      = github_repository.alaz.name
-  secret_name     = "AWS_SQS_URL"
-  plaintext_value = var.aws_secret_key
+  secret_name     = "AWS_S3_BUCKET"
+  plaintext_value = outputs.aws_bucket_name
 }
