@@ -78,5 +78,5 @@ resource "github_actions_secret" "secret_aws_region" {
 resource "github_actions_secret" "secrets_s3_bucket" {
   repository      = github_repository.alaz.name
   secret_name     = "AWS_S3_BUCKET"
-  plaintext_value = outputs.aws_bucket_name
+  plaintext_value = aws_s3_bucket.cv-content.bucket
 }
