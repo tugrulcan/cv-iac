@@ -4,10 +4,6 @@ resource "github_repository" "example" {
 
   visibility = "public"
   auto_init = true
-  template {
-    owner      = "github"
-    repository = "terraform-module-template"
-  }
 }
 
 #
