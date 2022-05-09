@@ -2,8 +2,9 @@ resource "github_repository" "alaz" {
   name        = "alaz"
   description = "Root repository for the cloud challenge backend"
 
-  visibility = "public"
-  auto_init  = true
+  visibility           = "public"
+  auto_init            = true
+  vulnerability_alerts = true
 }
 
 
