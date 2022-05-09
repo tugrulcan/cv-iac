@@ -7,10 +7,6 @@ resource "github_repository" "alaz" {
 }
 
 
-resource "github_branch" "main" {
-  repository = github_repository.alaz.name
-  branch     = "main"
-}
 resource "github_branch" "staging" {
   repository = github_repository.alaz.name
   branch     = "staging"
@@ -18,7 +14,7 @@ resource "github_branch" "staging" {
 
 resource "github_branch_default" "default"{
   repository = github_repository.alaz.name
-  branch     = github_branch.main.branch
+  branch     = "main"
 }
 
 
